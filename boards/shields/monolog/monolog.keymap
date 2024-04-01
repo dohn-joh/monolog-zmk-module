@@ -160,10 +160,12 @@
      /* COMBO(NAME, BINDING, KEYPOS, LAYERS, TIME) */
         COMBO(ldelete, &kp DEL, 11 13, BASE, 25)
         COMBO(rdelete, &kp DEL, 17 18, BASE GAME, 25)
+        COMBO(thenter, &kp ENTER, 35 36, BASE, 30)
         COMBO(lenter, &kp ENTER, 12 13, BASE, 30)
         COMBO(renter, &kp ENTER, 16 17, BASE GAME, 30)
         COMBO(caps, &kp CAPS, 16 18, BASE,  25)
         COMBO(printscreen, &kp PSCRN, 8 18, BASE, 25)
+        COMBO(wm, &wm 0 LGUI, 33 34, BASE, 25)
         COMBO(warpd, &kp LG(LA(A)), 7 17, BASE, 25)
 
         COMBO(mouse, &tog MOUSE, 11 12, BASE MOUSE, 15)
