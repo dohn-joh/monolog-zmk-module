@@ -1,0 +1,16 @@
+if SHIELD_MONOLOG_DONGLE
+
+config ZMK_KEYBOARD_NAME
+    default "Monolog Keyboard"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_MONOLOG_MAIN || SHIELD_MONOLOG_DONGLE
+
+config ZMK_SPLIT
+    default y
+
+endif
