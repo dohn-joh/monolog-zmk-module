@@ -66,7 +66,17 @@
         };
 
     behaviors {
-        // tap: sticky shift | double-tap: caps-word
+        emw: encoder_mousewheel {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            tap-ms = <10>;
+            bindings = <&msc SCROLL_UP>, <&msc SCROLL_DOWN>;
+        };
+        ews: encoder_window_scroll {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LG(LEFT)>, <&kp LG(RIGHT)>;
+        };
         ss: smart_shift {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -184,7 +194,7 @@
     &kp Z &kp X &kp C &kp V &lmk FN B &kp N0                            &tog MOUSE &kp N &kp M  &kp CMMA &kp DOT &kp SLASH
                                  &lt NAV ESC &kp SPACE &kp TAB            &kp BSPC &mo_sl SYM SYM &ss 
             >;
-            sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp UP DOWN>;
+            sensor-bindings = <&emw &ews>;
         };
 
         game {
